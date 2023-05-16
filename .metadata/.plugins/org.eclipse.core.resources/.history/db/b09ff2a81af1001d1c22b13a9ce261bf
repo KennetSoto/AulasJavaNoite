@@ -1,0 +1,26 @@
+package principal;
+
+import java.util.Scanner;
+
+/*
+ * Faça um programa que receba o salario base de um funcionário (salario bruto)
+ * faça o desconto de inss 5% e IR 11% mostre o valor dos descontos, e o valor do salario liquido
+ */
+public class Imposto {
+	public void descontos() {
+		Scanner scan = new Scanner(System.in);
+		double salario;
+		double inss;
+		double ir;
+		double salarioLiquido;
+		
+		System.out.println("Diga o seu salario: ");
+		salario = Scanner.nextDouble();
+		
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+}
