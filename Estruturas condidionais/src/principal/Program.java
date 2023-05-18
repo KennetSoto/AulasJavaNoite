@@ -18,7 +18,7 @@ public class Program {
 		 *
 		 * Operadores Logicos: 
 		 * && = e 
-		 * !! = ou 
+		 * || = ou 
 		 * ! = negação
 		 */
 
