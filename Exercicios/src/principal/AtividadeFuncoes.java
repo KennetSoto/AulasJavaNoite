@@ -3,9 +3,6 @@ package principal;
  * 1) Faça um programa que receba um valor em real e converta para dólares na cotação
 atual, faça o inverso também;
 
-3) Faça um programa com uma função que recebe dois parâmetros (valorDoProduto, lucroProduto) os produtos a serem 
-vendidos recebem o preço de custo e retorna o valor com uma porcentagem aplicada de lucro, por exemplo: 
-se um produto custa 10,00 e é aplicada uma taxa de 10 % de lucro, o produto será vendido por 11,00;
  */
 
 import java.util.Scanner;
@@ -16,12 +13,16 @@ public class AtividadeFuncoes {
 		Scanner sc = new Scanner(System.in);
 		 System.out.println("Digite o valor em real:");
 		 double real = sc.nextDouble();
-		 double taxaCambio = 5.05;
-		 double dollar = conversao(taxaCambio, real);
-		 
+    	 double taxaCambio = 5.05;
+    	 System.out.println("Digite o valor em dollar:");
+		 double dollar = sc.nextDouble();
+		 double dollarConvertido = conversao(taxaCambio, real);
+		 double realConvertido = conversao2(taxaCambio,dollar);
 		
-		 
-		System.out.printf("O valor convertido de R$"+ real+" para dollar é: $%.2f", dollar);
+
+		System.out.printf("O valor convertido de R$"+ real+" para dollar é: $%.2f", dollarConvertido);
+		System.out.println();
+		System.out.printf("O valor convertido de $"+ dollar+" para real é: R$%.2f", realConvertido);
 		sc.close();
 	}
 
@@ -29,5 +30,9 @@ public class AtividadeFuncoes {
 		 double dollar = real * taxaCambio;
 		 return dollar;
 	 }
+	public static double conversao2( double taxaCambio, double dollar) {
+		 double realConvertido = dollar / taxaCambio;
+		 return realConvertido;
+	}
 
 }
