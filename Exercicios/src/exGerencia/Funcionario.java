@@ -17,13 +17,13 @@ public class Funcionario {
 		    if (salario <= 5000) {
 			    salario += (salario * 1.5)/100;
 		    }
-		System.out.println("O salario do trabalhador "+cargo+" é "+salario);
+		System.out.println("O salario do trabalhador "+nome+" é "+cargo+" e o salario é "+salario);
 	  }
 		if(cargo.equalsIgnoreCase("funcionario")){
 			if(salario <= 1500) {
 			   salario += (salario * 2)/100;
 			}
-		System.out.println("O salario do trabalhador "+cargo+" é "+salario);
+		System.out.println("O salario do trabalhador "+nome+" é "+cargo+" e o salario com bonus é "+salario);
 		}
     }
 }

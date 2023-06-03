@@ -10,6 +10,9 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		Funcionario func = new Funcionario();
 		
+		System.out.println("Digite o nome do trabalhador: ");
+		func.nome = sc.nextLine();
+		
 		System.out.println("Digite o cargo: (funcionario) ou (gerente): ");
 		func.cargo = sc.nextLine();
 		
