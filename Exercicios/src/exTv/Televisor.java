@@ -15,36 +15,48 @@ mostrarStatus()        // Dizer qual o canal, o volume e se o televisor está lig
  */
 
 public class Televisor {
-	public int canal = Math.max(1, 16);
-	public int volume = Math.max(0,10);
-	public boolean ligado = true;
+	public int canal; 
+	public int volume;
+	public boolean ligado;
 	
-	public int aumentarVolume(int volume) {
-		int aumVolume = volume +1;
-		return aumVolume;		
+	public void aumentarVolume() {
+		if(volume >= 0 && volume <=10) {
+			volume +=1;
+		}	
 	}
-	public int reduzirVolume(int volume) {
-		int dimVolume = volume -1;
-		return dimVolume;		
+	public void reduzirVolume() {
+		if(volume >= 0 && volume <=10) {
+			volume -= 1;
+		}
 	}
-	public int subirCanal(int canal) {
-		int aumCanal = canal +1;
-		return aumCanal;		
+	public void subirCanal() {
+		if(canal == 0) {
+			canal +=1;
+		}
+		if(canal >= 1 && canal <= 16) {
+			canal +=1;
+		}
 	}
-	public int descerCanal(int canal) {
-		int dimCanal = canal -1;
-		return dimCanal;		
+	public void descerCanal() {
+		if(canal == 0) {
+			canal -=1;
+		}
+		if(canal >= 1 && canal <= 16) {
+			canal -=1;
+		}
 	}
-	public boolean ligarTelevisor(boolean ligado) {
-		boolean tvLig = true;
-		return tvLig;		
+	public void ligarTelevisor() {
+		ligado = true;	
+		canal = 1;
 	}
-	public boolean desligarTelevisor(boolean ligado) {
-		boolean tvDes = false;
-		return tvDes;		
+	public void desligarTelevisor() {
+		ligado = false;
 	}
-	public void mostrarStatus(int volume, int canal, boolean ligado) {
-		System.out.printf("O status da TV é: "+ ligado, canal, volume);
-		
+	public void mostrarStatus() {
+		if(ligado == true) {
+		System.out.println("O status da TV é: ligada, no canal "+canal+" e no volume "+ volume);
+		}else {
+			System.out.println("Televisor desligado");
+		}
 	}
 }

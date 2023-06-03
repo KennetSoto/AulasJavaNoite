@@ -1,23 +1,33 @@
 package exTv;
 
 import java.util.Scanner;
+import exTv.Televisor;
 
 public class Program {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Televisor televisor = new Televisor();
+		Televisor tv = new Televisor();
 		
-		System.out.println("Diga se a tv esta ligada: ");
-		televisor.ligado = sc.hasNext();
+	
+		tv.ligarTelevisor();
+		tv.aumentarVolume();
+		tv.aumentarVolume();
+		tv.aumentarVolume();
+		tv.aumentarVolume();
+		tv.subirCanal();
+		tv.subirCanal();
+		tv.mostrarStatus();
 		
-		System.out.println("Diga o canal que quer assistir: ");
-		televisor.canal = sc.nextInt();
+		tv.descerCanal();
+		tv.reduzirVolume();
+		tv.mostrarStatus();
 		
-		System.out.println("Diga o volume que gostaria: ");
-		televisor.volume = sc.nextInt();
+		tv.desligarTelevisor();
+		tv.mostrarStatus();
+	
 		
+				
     sc.close();
 	}
-
 }

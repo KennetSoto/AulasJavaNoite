@@ -12,13 +12,13 @@ public class Triangulo {
 	
 	public String tipoTriangulo(double area1, double area2, double area3) {
 		if(area1 == area2 && area2 == area3){
-			return "equilatero";
+			return "Triangulo equilatero";
 		}
 		if(area1 == area2 || area2 == area3 || area1 == area3) {
-			return  "isosceles";
+			return  "Triangulo isosceles";
 		}
 		else{
-			return  "escaleno";
+			return  "Triangulo escaleno";
 		}
 		
 	}

@@ -18,9 +18,8 @@ public class Program {
 		triangulo.area3 = sc.nextDouble();
 		
 		triangulo.tipoTri =triangulo.tipoTriangulo(triangulo.area1,triangulo.area2, triangulo.area3);
-		System.out.println("O triangulo é: "+ triangulo.tipoTri);
+		System.out.printf("O triangulo é um: %s ", triangulo.tipoTri);
 		
 		sc.close();
 	}
-
 }
