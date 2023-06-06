@@ -20,6 +20,7 @@ public class Program {
 		func.salario  = sc.nextDouble();
 		
 		func.verificaSalario();
+		sc.close();
 		
 	}
 
