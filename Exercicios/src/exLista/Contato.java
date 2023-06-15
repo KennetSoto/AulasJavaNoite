@@ -1,13 +1,13 @@
-package exConstrutores;
+package exLista;
 /*
  * Crie uma classe pessoa com os atributos: nome, idade, telefone. 
- * Faça na classe principal uma lista que incremente uma nova pessoa
- * e depois imprima todas as pessoas cadastradas.
+ * Faça na classe principal uma lista que incremente uma nova pessoa e depois imprima todas as pessoas cadastradas.
  */
-public class Pessoa {
+
+public class Contato {
 	public String nome;
 	public int idade;
-	public String  telefone;
+	public String telefone;
 	
 	public String getNome() {
 		return nome;
@@ -27,9 +27,10 @@ public class Pessoa {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
 	@Override
 	public String toString() {
-		return "Pessoa [nome= " + nome + ", idade= " + idade + ", telefone= " + telefone + "]";
+		return "Contato [nome=" + nome + ", idade=" + idade + ", telefone=" + telefone + "]";
 	}
+	
+
 }

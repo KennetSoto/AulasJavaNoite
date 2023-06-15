@@ -1,6 +1,7 @@
 package exEstoque;
 
 import java.util.Scanner;
+import exEstoque.ValorEstoque;
 /*
  * Crie uma classe produto contendo os atributos descrição, quantidade, preço, 
  * valor total em estoque. Pense em uma forma de atualizar o valor total em
@@ -13,21 +14,28 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	
-	System.out.println("Entre com nome do produto: ");
-    String nome = sc.nextLine();
-    
-    System.out.println("Entre com a quantidade: ");
-    int quantidade = sc.nextInt();
-    
-    System.out.println("Entre com preço: ");
-    double preco = sc.nextDouble();
-    
-    ValorEstoque valor = new ValorEstoque();
-    
-    System.out.println(valor);
-    sc.close();
-	
+
+		Scanner sc = new Scanner(System.in);
+		ValorEstoque produto = new ValorEstoque();
+
+		System.out.print("Entre com o nome do produto: ");
+		produto.setDescricao(sc.nextLine());
+
+		System.out.print("Entre com a quantidade a ser adicionada: ");
+		produto.adicionaProduto(sc.nextInt());
+
+		System.out.print("Entre com o valor unitário do produto: R$");
+		produto.setPreco(sc.nextDouble());
+
+		System.out.println(produto);
+
+		System.out.println("Quantidade de unidades a ser vendida: ");
+		produto.removeProduto(sc.nextInt());
+
+		System.out.println(produto);
+
+		sc.close();
+
 	}
 }
+

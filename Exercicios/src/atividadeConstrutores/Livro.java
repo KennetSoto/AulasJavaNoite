@@ -1,29 +1,40 @@
 package atividadeConstrutores;
-/*
- *Crie uma classe Livro onde seja obrigatório a inserção de do nome, 
- *titulo e valor do livro. Caso o livro ultrapasse o valor de  100 reais,
- *adicione uma taxa de 30% de imposto, você não poderá criar um método especifico para isso,
- *apenas os métodos get e set já existentes. Mostre os dados do livro cadastrado.
- */
+
 public class Livro {
-	public String nome;
-	public String titulo;
-	public double valor;
-	
-	public String getNome() {
-		return nome;
+	//Ordem sugerida a seguir na classe:
+	//1º atributos da classe
+	// 2º construtores
+	// 3º metodo get e set
+	// 4º demais métodos
+	//get é pra obter e set é pra atribuir
+	//quando precisa de dados obrigatórios faz o construtor (Alt + Shift + S Constructor superClass) 
+	// o this é uma palavra para distinguir o que é atributo da classe para o parametro recebido
+
+	private String nomeLivro;
+	private int edicao;
+	private double valor;
+
+	public Livro(String nomeLivro, int edicao, double valor) {
+		super();
+		this.nomeLivro = nomeLivro;
+		this.edicao = edicao;
+		this.valor = valor;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public String getNomeLivro() {
+		return nomeLivro;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public void setNomeLivro(String nomeLivro) {
+		this.nomeLivro = nomeLivro;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public int getEdicao() {
+		return edicao;
+	}
+
+	public void setEdicao(int edicao) {
+		this.edicao = edicao;
 	}
 
 	public double getValor() {
@@ -31,12 +42,24 @@ public class Livro {
 	}
 
 	public void setValor(double valor) {
-		if(valor >100 ) {
-			valor = (valor + 30)/100;
+		if (valor > 100) {
+			this.valor+= (valor * 0.30);
 		}
-		this.valor = valor;
+		else {
+			this.valor = valor;
+		}
+
+
+
 	}
+
+
+	@Override
 	public String toString() {
-		return "\n Nome: "+nome+ "\n Titulo: "+titulo+ "\n Valor: R$"+valor;
+		// TODO Auto-generated method stub
+		return "Livro: " + nomeLivro + "\nEdição: " + edicao + "\nValor: R$ " + valor;
+
 	}
+
+
 }
