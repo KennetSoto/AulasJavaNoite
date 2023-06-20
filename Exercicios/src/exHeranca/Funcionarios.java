@@ -51,14 +51,15 @@ public class Funcionarios {
 	public double getSalario() {
 		return salario;
 	}
-	public void abono(double salario) {
-		salario +=500;
+	
+	public void abono() {
+		this.salario += 150.00;
 	}
 
 	@Override
 	public String toString() {
-		return "Funcionarios [nome= " + nome + ", idade= " + idade + ", sexo= " + sexo + ", departamento= " + departamento
-				+ ", salario= " +getSalario() + "]";
+		return "Funcionarios: nome= " + nome + ", idade= " + idade + ", sexo= " + sexo + ", departamento= " + departamento
+				+ ", salario= " +getSalario();
 	}
 
 }

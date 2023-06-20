@@ -12,8 +12,8 @@ public class Secretaria extends Funcionarios {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public void abono(double salario) {
-		salario += 150;
+	public void abono() {
+		this.salario += 150.00;
 		
 	}
 

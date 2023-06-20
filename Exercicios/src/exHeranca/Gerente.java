@@ -12,8 +12,9 @@ public class Gerente extends Funcionarios {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public void abono(double salario) {
-		salario += 500;
+	public void abono() {
+		this.salario += 500.00;
 	}
+	
 
 }

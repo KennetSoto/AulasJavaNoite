@@ -5,7 +5,6 @@ package exHeranca;
  * gerente ganha uma bonificação de 500 reais e os demais funcionários ganham uma bonificação de  150 reais por mês.
  *  mostre os dados dos funcionários e seus respectivos salários acrescidos da bonificação;
  */
-
 import java.util.Scanner;
 
 public class Program {
@@ -13,8 +12,16 @@ public class Program {
 	Scanner sc = new Scanner(System.in);
 
 	Funcionarios funcionarios = new Funcionarios("Dudu", 34, 'm', "futebol", 10000);
-	Gerente gerente = new Gerente("Abel", 43, 'm', "tecnico", 5000);
+	//pode chamar classe funcionario por causa do polimorfismo
+	Funcionarios gerente = new Gerente("Abel", 43, 'm', "técnico", 5000);
+	//pode chamr direto referente a classe
 	Secretaria secretaria = new Secretaria("Leila", 50, 'f', "presidente", 3000);
+	
+	
+	//chamar o metodo que altera os valores para serem atribuidos no resultado
+	funcionarios.abono();
+	gerente.abono();
+	secretaria.abono();
 	
 	System.out.println(funcionarios);
 	System.out.println(gerente);
